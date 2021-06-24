@@ -12,7 +12,7 @@ const Chat = ({chat, messages}) => {
     <Container>
       <Head>
         <title>Chat with {getRecipientEmil(chat.users, user)}</title>
-        <link rel="icon" href="/public/spinner.gif" />
+        <link rel="icon" href="/public/whatsapp.gif" />
       </Head>
       <Sidebar />
       <ChatContainer>
@@ -48,7 +48,7 @@ export const getServerSideProps = async (context) => {
     id: chatRes.id,
     ...chatRes.data(),
   };
-  
+
   return {
     props: {
       messages: JSON.stringify(messages),
